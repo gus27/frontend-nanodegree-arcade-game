@@ -1,6 +1,24 @@
-frontend-nanodegree-arcade-game
-===============================
+# Go Surfin'
+A frogger clone for the *frontend-nanodegree-arcade-game* project.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Installation
+Extract the contents of the zip file and open the containing `index.html` in your browser.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Playing the game
+Move the player from the lawn area at the bottom to the water at the top  but avoid the enemies on it's way. Score as much points as you can.
+
+### Choosing a character
+Before starting the game you can choose a character at the start screen. Simply press the `[left]` and `[right]` arrow keys.
+
+### Start the game
+From the start screen simply press the `[space]` key to start the game.
+
+### Moving the player
+You can move the player using the `[left]`, `[right]`, `[up]` and `[down]` arrow keys.
+
+### Scoring
+* Every time reaching the water you gain 1,000 points.
+* If you collide with an enemy you loose 100 points.
+
+### Quit the game
+By pressing the `q` key you can quit the running game and enter the start screen again.

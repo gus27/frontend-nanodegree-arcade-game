@@ -21,13 +21,14 @@ var Engine = (function(global) {
      */
     var doc = global.document,
         win = global.window,
-        canvas = doc.createElement('canvas'),
+        //canvas = doc.createElement('canvas'),
+        canvas = doc.querySelector('canvas'),
         ctx = canvas.getContext('2d'),
         lastTime;
 
     canvas.width = 505;
     canvas.height = 606;
-    doc.body.appendChild(canvas);
+    //doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -95,6 +96,7 @@ var Engine = (function(global) {
             enemy.update(dt);
         });
         player.update();
+        scoreBoard.update();
     }
 
     /* This function initially draws the "game level", it will then call
@@ -148,10 +150,12 @@ var Engine = (function(global) {
          * the render function you have defined.
          */
         allEnemies.forEach(function(enemy) {
-            enemy.render();
+            enemy.render(ctx);
         });
 
-        player.render();
+        player.render(ctx);
+        scoreBoard.render(ctx);
+        startScreen.render(ctx);
     }
 
     /* This function does nothing but it could have been a good place to
@@ -159,7 +163,12 @@ var Engine = (function(global) {
      * those sorts of things. It's only called once by the init() method.
      */
     function reset() {
-        // noop
+        allEnemies.forEach(function(enemy) {
+            enemy.init();
+        });
+
+        player.init();
+        scoreBoard.init();
     }
 
     /* Go ahead and load all of the images we know we're going to need to
@@ -171,7 +180,11 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/char-cat-girl.png',
+        'images/char-horn-girl.png',
+        'images/char-pink-girl.png',
+        'images/char-princess-girl.png'
     ]);
     Resources.onReady(init);
 

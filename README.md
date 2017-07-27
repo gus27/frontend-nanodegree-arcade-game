@@ -4,6 +4,8 @@ A frogger clone for the *frontend-nanodegree-arcade-game* project.
 ## Installation
 Extract the contents of the zip file and open the containing `index.html` in your browser.
 
+You can try it [live here](https://gus27.github.io/go-surfin/index.html).
+
 ## Playing the game
 Move the player from the lawn area at the bottom to the water at the top  but avoid the enemies on it's way. Score as much points as you can.
 
